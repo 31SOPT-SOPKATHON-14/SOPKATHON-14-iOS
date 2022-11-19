@@ -14,12 +14,81 @@ class RankingViewController : UIViewController{
     
     //MARK: - UI Components
     
-    private let headerView: UIView = {
+    private let naviagationView : UIView = {
         let view = UIView()
-        view.backgroundColor = .brown
         return view
-    }() // headerView 갈색으로 표시
+    }()
     
+    private let backButton : UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        button.contentMode = .scaleAspectFill
+        button.tintColor = .black
+        button.addTarget(self, action: #selector(backButtonDidTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    private let navigationLabel : UILabel = {
+        let label = UILabel()
+        label.text = "마이페이지"
+        label.font = .systemFont(ofSize: 20, weight: .bold)
+        return label
+    }()
+    private let myView : UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemGray6
+        view.layer.cornerRadius = 10
+        view.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        view.layer.shadowOpacity = 1
+        view.layer.shadowRadius = 4
+        view.layer.shadowOffset = CGSize(width: 0, height: 4)
+        return view
+    }()
+    
+    private let levelImageView : UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "badgeA")
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
+    
+    private let myNameLabel : UILabel = {
+        let label = UILabel()
+        label.text = "장석우님"
+        label.font = .systemFont(ofSize: 24, weight: .medium)
+        return label
+    }()
+    
+    private let progressView : UIProgressView = {
+        let progressView = UIProgressView()
+        progressView.tintColor = .camiLightPurple
+        progressView.trackTintColor = .systemGray4
+        progressView.progress = 0.5
+        return progressView
+    }()
+    
+    private let successMissionDescriptionLabel : UILabel = {
+        let label = UILabel()
+        label.text = "총 달성 갯수"
+        label.font = .systemFont(ofSize: 12, weight: .regular)
+        return label
+    }()
+    
+    private let successMissionLabel : UILabel = {
+        let label = UILabel()
+        label.text = "4/5"
+        label.font = .systemFont(ofSize: 12, weight: .regular)
+        label.textColor = .camiLightPurple
+        return label
+    }()
+    
+    private let schoolRankingLabel : UILabel = {
+        let label = UILabel()
+        label.text = "우리학교 랭킹"
+        label.font = .systemFont(ofSize: 20, weight: .bold)
+        return label
+    }()
+
     private lazy var rankingCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -59,31 +128,105 @@ class RankingViewController : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUI()
         setLayout()
         register()
     }
     
+    private func setUI(){
+        view.backgroundColor = .white
+    }
+    
     private func setLayout(){
         
-        view.backgroundColor = .white
+
         
-        view.addSubview(rankingCollectionView)
-        view.addSubview(headerView)
+        view.addSubViews(naviagationView,
+                         myView,
+                         schoolRankingLabel,
+                         rankingCollectionView)
         
+        naviagationView.addSubViews(backButton,navigationLabel)
         
-        headerView.snp.makeConstraints{
-            $0.top.equalTo(self.view.safeAreaLayoutGuide)
-            $0.centerX.equalToSuperview()
-            $0.width.equalTo(361.adjusted)
-            $0.height.equalTo(259.adjusted)
+        myView.addSubViews(
+            levelImageView,
+            myNameLabel,
+            progressView,
+            successMissionDescriptionLabel,
+            successMissionLabel
+        )
+        
+        backButton.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.leading.equalToSuperview().offset(15)
+            $0.height.width.equalTo(20)
         }
+        
+        navigationLabel.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.leading.equalTo(backButton.snp.trailing).offset(10)
+        }
+        
+        naviagationView.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide)
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(44)
+        }
+        
+        myView.snp.makeConstraints {
+            $0.top.equalTo(naviagationView.snp.bottom).offset(10)
+            $0.leading.trailing.equalToSuperview().inset(14)
+            $0.height.equalTo(130)
+        }
+
+        levelImageView.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.leading.equalToSuperview().offset(20)
+            $0.height.equalTo(74)
+            $0.width.equalTo(60)
+        }
+        
+        myNameLabel.snp.makeConstraints {
+            $0.top.equalTo(levelImageView).offset(5)
+            $0.leading.equalTo(levelImageView.snp.trailing).offset(16)
+        }
+        
+        progressView.snp.makeConstraints {
+            $0.top.equalTo(myNameLabel.snp.bottom).offset(6)
+            $0.leading.equalTo(myNameLabel)
+            $0.trailing.equalToSuperview().offset(-20)
+            $0.height.equalTo(8)
+        }
+        
+        successMissionDescriptionLabel.snp.makeConstraints {
+            $0.top.equalTo(progressView.snp.bottom).offset(8)
+            $0.leading.equalTo(progressView)
+        }
+        
+        successMissionLabel.snp.makeConstraints {
+            $0.centerY.equalTo(successMissionDescriptionLabel)
+            $0.trailing.equalTo(progressView)
+        }
+        
+        schoolRankingLabel.snp.makeConstraints {
+            $0.top.equalTo(myView.snp.bottom).offset(24)
+            $0.leading.equalTo(myView)
+        }
+        
         
         rankingCollectionView.snp.makeConstraints {
-            $0.top.equalTo(self.view.safeAreaLayoutGuide)
-            $0.leading.trailing.equalTo(self.view.safeAreaLayoutGuide)
+            $0.top.equalTo(schoolRankingLabel.snp.bottom).offset(16)
+            $0.leading.trailing.equalTo(myView)
             $0.bottom.equalToSuperview()
-            $0.height.equalTo(calculateCellHeight())
         }
+        
+        
+    }
+    
+    //MARK: - Action Method
+
+    @objc func backButtonDidTapped(){
+        navigationController?.popViewController(animated: true)
     }
 }
 
@@ -110,7 +253,7 @@ extension RankingViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = UIScreen.main.bounds.width
         let CellWidth = screenWidth - friendListInset.left - friendListInset.right
-        return CGSize(width: CellWidth, height: 48.adjusted)
+        return CGSize(width: CellWidth, height: 48)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -119,13 +262,6 @@ extension RankingViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return friendListInset
-    }
-    
-    // MARK: collectionview에 header를 만들어주기 위해 사용
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        let width: CGFloat = collectionView.frame.width
-        let height: CGFloat = 260.adjusted
-        return CGSize(width: width, height: height)
     }
 }
 
@@ -141,6 +277,7 @@ extension RankingViewController: UICollectionViewDataSource {
             withReuseIdentifier: RankingCollectionViewCell.identifier, for: indexPath)
                 as? RankingCollectionViewCell else { return UICollectionViewCell() }
         cell.dataBind(model: friendList[indexPath.item])
+        
         return cell
     }
 }
