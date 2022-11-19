@@ -173,7 +173,7 @@ https://sulfuric-alphabet-33a.notion.site/iOS-1-d5a179be349642798efa425aaca8ead5
 
 <br>
  
-## 우리 사진><
+## 📸 우리 사진><
 
 <details>
 <summary>접기/펼치기</summary>
@@ -191,30 +191,40 @@ https://sulfuric-alphabet-33a.notion.site/iOS-1-d5a179be349642798efa425aaca8ead5
 ## 😂 개발 시 어려웠던 점 
 
 <details>
+<summary>윤서☃️</summary>
+<div markdown="1">       
 
-<summary> 윤서 </summary>
+😎숨겨진 내용😎
 
-<!-- summary 아래 한칸 공백 두어야함 -->
+</div>
+</details>
 
-- 
+<details>
+<summary>효원🐰</summary>
+<div markdown="1">       
 
-<summary> 성호 </summary>
+😎숨겨진 내용😎
 
-<!-- summary 아래 한칸 공백 두어야함 -->
+</div>
+</details>
 
-- ㄴㅇㄹ  
+<details>
+<summary>석우🙈</summary>
+<div markdown="1">       
 
-<summary> 석우 </summary>
+😎숨겨진 내용😎
 
-<!-- summary 아래 한칸 공백 두어야함 -->
+</div>
+</details>
 
-- ㄴㅇㄹㄴㅇㄹㄴ 
+<details>
+<summary>성호🦥</summary>
+<div markdown="1">       
 
-<summary> 효원 </summary>
+😎숨겨진 내용😎
 
-<!-- summary 아래 한칸 공백 두어야함 -->
-
-- ㅁㅇㄴㄹㅁㄴㅇㄹ
+</div>
+</details>
 
 
 
