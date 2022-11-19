@@ -194,7 +194,9 @@ https://sulfuric-alphabet-33a.notion.site/iOS-1-d5a179be349642798efa425aaca8ead5
 <summary>윤서☃️</summary>
 <div markdown="1">       
 
-😎숨겨진 내용😎
+- 어려웠던 점 : 
+ 
+- 해결 방법 :
 
 </div>
 </details>
@@ -215,7 +217,9 @@ https://sulfuric-alphabet-33a.notion.site/iOS-1-d5a179be349642798efa425aaca8ead5
 <summary>석우🙈</summary>
 <div markdown="1">       
 
-😎숨겨진 내용😎
+- 어려웠던 점 : 
+ 
+- 해결 방법 :
 
 </div>
 </details>
@@ -224,10 +228,10 @@ https://sulfuric-alphabet-33a.notion.site/iOS-1-d5a179be349642798efa425aaca8ead5
 <summary>성호🦥</summary>
 <div markdown="1">       
 
-똑같이 생긴 뷰를 구현하더라도, 어떤식으로 만들지에 대해 우선적으로 협의하지 않아 구현 방식이 서로 달랐다. 
+- 어려웠던 점 : 똑같이 생긴 뷰를 구현하더라도, 어떤식으로 만들지에 대해 우선적으로 협의하지 않아 구현 방식이 서로 달랐다. 
 나중에 develop에 push하여 헤더뷰를 합치는 과정에서, AutoLayout을 잡는 것이 번거로웠다. 
 
-해결 방법 : 다른 화면을 구현할 시에는 어떠한 UIView를 사용할 지를 미리 정해 충돌을 방지했다. 
+- 해결 방법 : 다른 화면을 구현할 시에는 어떠한 UIView를 사용할 지를 미리 정해 충돌을 방지했다. 
 
 </div>
 </details>
