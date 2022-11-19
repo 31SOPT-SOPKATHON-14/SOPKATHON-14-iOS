@@ -284,8 +284,9 @@
 		87AD483D2929566800BEB36D /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
-				87AD483E292956AC00BEB36D /* MyPageViewController.swift */,
-				87AD485129297E9C00BEB36D /* MyPageTableViewCell.swift */,
+				87AD485529298DFA00BEB36D /* View */,
+				87AD485429298DF500BEB36D /* Controller */,
+				87AD485329298DEE00BEB36D /* Model */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -312,6 +313,29 @@
 				87AD484929295B3600BEB36D /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		87AD485329298DEE00BEB36D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		87AD485429298DF500BEB36D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				87AD483E292956AC00BEB36D /* MyPageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		87AD485529298DFA00BEB36D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				87AD485129297E9C00BEB36D /* MyPageTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
