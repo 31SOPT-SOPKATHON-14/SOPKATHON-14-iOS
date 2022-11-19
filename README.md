@@ -217,9 +217,9 @@ https://sulfuric-alphabet-33a.notion.site/iOS-1-d5a179be349642798efa425aaca8ead5
 <summary>석우🙈</summary>
 <div markdown="1">       
 
-- 어려웠던 점 : 
+- 어려웠던 점 : tableView와 CollectionView가 유사하면서도 달라 혼란스러웠다.
  
-- 해결 방법 :
+- 해결 방법 : 애플 공식문서를 정독하며 두 메소드 간의 차이점을 분석하여 사용하였다.
 
 </div>
 </details>
