@@ -11,6 +11,24 @@ import SnapKit
 class MyPageViewController : UIViewController{
     
     //MARK: - Properties
+    
+    var missionData = [
+        "대학교 고양이 밥주기",
+        "좋아하는 사람과 중앙 호수 걷기",
+        "좋아하는 선배와 학식 먹기",
+        "잔디밭에서 술마시기",
+        "혜화 대학로 호호식당 방문하기",
+        "대학교 고양이 밥주기",
+        "좋아하는 사람과 중앙 호수 걷기",
+        "좋아하는 선배와 학식 먹기",
+        "잔디밭에서 술마시기",
+        "혜화 대학로 호호식당 방문하기",
+        "대학교 고양이 밥주기",
+        "좋아하는 사람과 중앙 호수 걷기",
+        "좋아하는 선배와 학식 먹기",
+        "잔디밭에서 술마시기",
+        "혜화 대학로 호호식당 방문하기"
+    ]
   
     //MARK: - UI Components
     
@@ -221,12 +239,12 @@ extension MyPageViewController : UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        return missionData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "1", for: indexPath) as! MissionTableViewCell
-        print(cell.frame.height)
+        cell.missionLabel.text = missionData[indexPath.row]
         return cell
     }
     

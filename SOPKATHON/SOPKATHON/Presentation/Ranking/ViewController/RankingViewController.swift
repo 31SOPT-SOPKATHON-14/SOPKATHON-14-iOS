@@ -30,7 +30,7 @@ class RankingViewController : UIViewController{
     
     private let navigationLabel : UILabel = {
         let label = UILabel()
-        label.text = "마이페이지"
+        label.text = "랭킹"
         label.font = .systemFont(ofSize: 20, weight: .bold)
         return label
     }()
@@ -88,6 +88,8 @@ class RankingViewController : UIViewController{
         label.font = .systemFont(ofSize: 20, weight: .bold)
         return label
     }()
+    
+    
 
     private lazy var rankingCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -105,23 +107,23 @@ class RankingViewController : UIViewController{
     // MARK: - Variables
     
     var friendList: [RankingModel] = [
-        RankingModel(gradeImage: "profileImage1", name: "배성호"),
-        RankingModel(gradeImage: "profileImage1", name: "장석우"),
-        RankingModel(gradeImage: "profileImage1", name: "강윤서"),
-        RankingModel(gradeImage: "profileImage1", name: "최효원"),
-        RankingModel(gradeImage: "profileImage1", name: "배성호"),
-        RankingModel(gradeImage: "profileImage1", name: "장석우"),
-        RankingModel(gradeImage: "profileImage1", name: "강윤서"),
-        RankingModel(gradeImage: "profileImage1", name: "최효원"),
-        RankingModel(gradeImage: "profileImage1", name: "배성호"),
-        RankingModel(gradeImage: "profileImage1", name: "장석우"),
-        RankingModel(gradeImage: "profileImage1", name: "강윤서"),
-        RankingModel(gradeImage: "profileImage1", name: "최효원"),
+        RankingModel(gradeImage: "badge_a", name: "배성호"),
+        RankingModel(gradeImage: "badge_a", name: "장석우"),
+        RankingModel(gradeImage: "badge_b", name: "강윤서"),
+        RankingModel(gradeImage: "badge_b", name: "최효원"),
+        RankingModel(gradeImage: "badge_b", name: "배성호"),
+        RankingModel(gradeImage: "badge_c", name: "장석우"),
+        RankingModel(gradeImage: "badge_c", name: "강윤서"),
+        RankingModel(gradeImage: "badge_f", name: "최효원"),
+        RankingModel(gradeImage: "badge_f", name: "배성호"),
+        RankingModel(gradeImage: "badge_f", name: "장석우"),
+        RankingModel(gradeImage: "badge_a", name: "강윤서"),
+        RankingModel(gradeImage: "badge_a", name: "최효원"),
     ]
  
     final let friendListInset: UIEdgeInsets = UIEdgeInsets(top: 0, left: 15.adjusted, bottom: 265.adjusted, right: 15.adjusted)
     final let friendListLineSpacing: CGFloat = 8.adjusted
-    final let CellHeight: CGFloat = 48.adjusted
+    final let CellHeight: CGFloat = 56.adjusted
     
     //MARK: - Life Cycle
 
@@ -253,7 +255,7 @@ extension RankingViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = UIScreen.main.bounds.width
         let CellWidth = screenWidth - friendListInset.left - friendListInset.right
-        return CGSize(width: CellWidth, height: 48)
+        return CGSize(width: CellWidth, height: 56)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
