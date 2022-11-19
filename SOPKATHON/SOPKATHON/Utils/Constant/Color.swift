@@ -14,7 +14,7 @@ extension UIColor {
 }
 
 extension UIColor{
-//    class var camiMint: UIColor{
-//        return UIColor(r: 1, g: 1, b: 1)
-//    }
+    class var main: UIColor{
+        return UIColor(r: 191, g: 191, b: 255)
+    }
 }
