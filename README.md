@@ -203,7 +203,10 @@ https://sulfuric-alphabet-33a.notion.site/iOS-1-d5a179be349642798efa425aaca8ead5
 <summary>효원🐰</summary>
 <div markdown="1">       
 
-😎숨겨진 내용😎
+- 어려웠던 점 : viewType을 나눠서 미션을 성공했을 때의 화면과 달성했을 때의 Home 화면을 다르게 구성해줘야 했다... 
+              열심히 type 나눠서 해보았지만 적용이 되지 않았따...
+- 해결 방법 : 그냥.... View 2개 만들어서 present 해줬따..
+  
 
 </div>
 </details>
