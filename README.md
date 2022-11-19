@@ -185,3 +185,37 @@ https://sulfuric-alphabet-33a.notion.site/iOS-1-d5a179be349642798efa425aaca8ead5
 </details>
 
 
+
+<br>
+
+## 😂 개발 시 어려웠던 점 
+
+<details>
+
+<summary> 윤서 </summary>
+
+<!-- summary 아래 한칸 공백 두어야함 -->
+
+- 
+
+<summary> 성호 </summary>
+
+<!-- summary 아래 한칸 공백 두어야함 -->
+
+- ㄴㅇㄹ  
+
+<summary> 석우 </summary>
+
+<!-- summary 아래 한칸 공백 두어야함 -->
+
+- ㄴㅇㄹㄴㅇㄹㄴ 
+
+<summary> 효원 </summary>
+
+<!-- summary 아래 한칸 공백 두어야함 -->
+
+- ㅁㅇㄴㄹㅁㄴㅇㄹ
+
+
+
+
