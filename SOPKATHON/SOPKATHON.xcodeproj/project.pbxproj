@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		024B83C729298D9C00A33BCF /* LaterHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024B83C629298D9C00A33BCF /* LaterHomeViewController.swift */; };
 		3B186B952928DE480030F5DE /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B186B942928DE480030F5DE /* NetworkLoggerPlugin.swift */; };
 		3B186B982928DEA10030F5DE /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 3B186B972928DEA10030F5DE /* Moya */; };
 		3B186B9A2928DED30030F5DE /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B186B992928DED30030F5DE /* Enviroment.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		024B83C629298D9C00A33BCF /* LaterHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaterHomeViewController.swift; sourceTree = "<group>"; };
 		3B186B942928DE480030F5DE /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
 		3B186B992928DED30030F5DE /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
 		3B186B9B2928DF050030F5DE /* URLConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstant.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				87AD484229295A5500BEB36D /* HomeViewController.swift */,
+				024B83C629298D9C00A33BCF /* LaterHomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				87AD484A29295B3600BEB36D /* OnboardingViewController.swift in Sources */,
 				3B6115792926AEAA00AF62E6 /* Color.swift in Sources */,
 				3B6115752926AB2A00AF62E6 /* UIstackView+.swift in Sources */,
+				024B83C729298D9C00A33BCF /* LaterHomeViewController.swift in Sources */,
 				3B186BA22928DF620030F5DE /* NetworkConstant.swift in Sources */,
 				3B61155229269FE200AF62E6 /* AppDelegate.swift in Sources */,
 				85C57D4E2929766C00B72C02 /* GradeResponseDto.swift in Sources */,
