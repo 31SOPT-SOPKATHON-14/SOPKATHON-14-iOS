@@ -226,6 +226,7 @@ extension MyPageViewController : UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "1", for: indexPath) as! MissionTableViewCell
+        print(cell.frame.height)
         return cell
     }
     
