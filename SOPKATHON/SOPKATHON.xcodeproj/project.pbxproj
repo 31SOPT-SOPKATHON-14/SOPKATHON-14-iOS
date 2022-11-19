@@ -31,6 +31,10 @@
 		3B6115852926B45B00AF62E6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B6115842926B45B00AF62E6 /* SnapKit */; };
 		3B6115882926B46800AF62E6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3B6115872926B46800AF62E6 /* Kingfisher */; };
 		3B61158B2926B47000AF62E6 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 3B61158A2926B47000AF62E6 /* Then */; };
+		85C57D4629295D9100B72C02 /* RankingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C57D4529295D9100B72C02 /* RankingCollectionViewCell.swift */; };
+		85C57D492929614400B72C02 /* RankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C57D482929614400B72C02 /* RankingModel.swift */; };
+		85C57D4C2929742800B72C02 /* SwiftyColor in Frameworks */ = {isa = PBXBuildFile; productRef = 85C57D4B2929742800B72C02 /* SwiftyColor */; };
+		85C57D4E2929766C00B72C02 /* GradeResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C57D4D2929766C00B72C02 /* GradeResponseDto.swift */; };
 		87AD483F292956AC00BEB36D /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AD483E292956AC00BEB36D /* MyPageViewController.swift */; };
 		87AD484329295A5500BEB36D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AD484229295A5500BEB36D /* HomeViewController.swift */; };
 		87AD484529295A6A00BEB36D /* MissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AD484429295A6A00BEB36D /* MissionViewController.swift */; };
@@ -61,6 +65,9 @@
 		3B6115782926AEAA00AF62E6 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		3B61157D2926AEC300AF62E6 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		3B6115812926B0F800AF62E6 /* Adjusted+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjusted+.swift"; sourceTree = "<group>"; };
+		85C57D4529295D9100B72C02 /* RankingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCollectionViewCell.swift; sourceTree = "<group>"; };
+		85C57D482929614400B72C02 /* RankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingModel.swift; sourceTree = "<group>"; };
+		85C57D4D2929766C00B72C02 /* GradeResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradeResponseDto.swift; path = SOPKATHON/Presentation/Ranking/GradeResponseDto.swift; sourceTree = SOURCE_ROOT; };
 		87AD483E292956AC00BEB36D /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		87AD484229295A5500BEB36D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		87AD484429295A6A00BEB36D /* MissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +82,7 @@
 			files = (
 				3B6115882926B46800AF62E6 /* Kingfisher in Frameworks */,
 				3B61158B2926B47000AF62E6 /* Then in Frameworks */,
+				85C57D4C2929742800B72C02 /* SwiftyColor in Frameworks */,
 				3B186B982928DEA10030F5DE /* Moya in Frameworks */,
 				3B6115852926B45B00AF62E6 /* SnapKit in Frameworks */,
 			);
@@ -86,6 +94,7 @@
 		3B186B902928DDC50030F5DE /* API */ = {
 			isa = PBXGroup;
 			children = (
+				85C57D4D2929766C00B72C02 /* GradeResponseDto.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -199,7 +208,9 @@
 		3B6115682926AA0A00AF62E6 /* Ranking */ = {
 			isa = PBXGroup;
 			children = (
-				87AD484629295ACC00BEB36D /* RankingViewController.swift */,
+				85C57D482929614400B72C02 /* RankingModel.swift */,
+				85C57D4729295D9900B72C02 /* ViewController */,
+				85C57D4429295CD000B72C02 /* CollectionViewCell */,
 			);
 			path = Ranking;
 			sourceTree = "<group>";
@@ -250,6 +261,22 @@
 				3B6115812926B0F800AF62E6 /* Adjusted+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		85C57D4429295CD000B72C02 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				85C57D4529295D9100B72C02 /* RankingCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		85C57D4729295D9900B72C02 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				87AD484629295ACC00BEB36D /* RankingViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		87AD483D2929566800BEB36D /* MyPage */ = {
@@ -305,6 +332,7 @@
 				3B6115872926B46800AF62E6 /* Kingfisher */,
 				3B61158A2926B47000AF62E6 /* Then */,
 				3B186B972928DEA10030F5DE /* Moya */,
+				85C57D4B2929742800B72C02 /* SwiftyColor */,
 			);
 			productName = SOPKATHON;
 			productReference = 3B61154E29269FE200AF62E6 /* SOPKATHON.app */;
@@ -339,6 +367,7 @@
 				3B6115862926B46800AF62E6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				3B6115892926B47000AF62E6 /* XCRemoteSwiftPackageReference "Then" */,
 				3B186B962928DEA10030F5DE /* XCRemoteSwiftPackageReference "Moya" */,
+				85C57D4A2929742800B72C02 /* XCRemoteSwiftPackageReference "SwiftyColor" */,
 			);
 			productRefGroup = 3B61154F29269FE200AF62E6 /* Products */;
 			projectDirPath = "";
@@ -381,9 +410,12 @@
 				3B6115752926AB2A00AF62E6 /* UIstackView+.swift in Sources */,
 				3B186BA22928DF620030F5DE /* NetworkConstant.swift in Sources */,
 				3B61155229269FE200AF62E6 /* AppDelegate.swift in Sources */,
+				85C57D4E2929766C00B72C02 /* GradeResponseDto.swift in Sources */,
 				3B6115822926B0F800AF62E6 /* Adjusted+.swift in Sources */,
 				87AD484329295A5500BEB36D /* HomeViewController.swift in Sources */,
+				85C57D492929614400B72C02 /* RankingModel.swift in Sources */,
 				3B61155429269FE200AF62E6 /* SceneDelegate.swift in Sources */,
+				85C57D4629295D9100B72C02 /* RankingCollectionViewCell.swift in Sources */,
 				3B186BA72928DFFE0030F5DE /* SigninResponse.swift in Sources */,
 				87AD484529295A6A00BEB36D /* MissionViewController.swift in Sources */,
 				3B186B952928DE480030F5DE /* NetworkLoggerPlugin.swift in Sources */,
@@ -630,6 +662,14 @@
 				kind = branch;
 			};
 		};
+		85C57D4A2929742800B72C02 /* XCRemoteSwiftPackageReference "SwiftyColor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/SwiftyColor";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -652,6 +692,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3B6115892926B47000AF62E6 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		85C57D4B2929742800B72C02 /* SwiftyColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85C57D4A2929742800B72C02 /* XCRemoteSwiftPackageReference "SwiftyColor" */;
+			productName = SwiftyColor;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
