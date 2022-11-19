@@ -71,7 +71,7 @@ class HomeViewController : UIViewController{
     
     private let missionArriveLabel: UILabel = {
         let label = UILabel()
-//        label.text = "미션이 도착했어요!"
+        label.text = "미션이 도착했어요!"
         label.font = .systemFont(ofSize: 32, weight: .bold)
 
         return label
@@ -79,7 +79,7 @@ class HomeViewController : UIViewController{
     
     private let missionClickLabel: UILabel = {
         let label = UILabel()
-//        label.text = "클릭해서 미션을 확인해보세요!"
+        label.text = "클릭해서 미션을 확인해보세요!"
         label.font = .systemFont(ofSize: 16, weight: .medium)
 
         return label
