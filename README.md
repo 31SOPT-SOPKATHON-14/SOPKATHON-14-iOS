@@ -237,5 +237,11 @@ https://sulfuric-alphabet-33a.notion.site/iOS-1-d5a179be349642798efa425aaca8ead5
 </details>
 
 
+<br>
+
+## 🎥 시연영상
+
+![Simulator Screen Recording - iPhone 14 Pro - 2022-11-20 at 08 13 16](https://user-images.githubusercontent.com/81157265/202875227-1bbde269-5f4d-4729-baaf-8c7afdc2724f.gif)
+
 
 
