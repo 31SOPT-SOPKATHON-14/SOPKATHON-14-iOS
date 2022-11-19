@@ -18,7 +18,7 @@ class MissionViewController : UIViewController{
     
     //MARK: - UI Components
     private let naviView = UIView()
-    private let backButton = UIButton()
+    private lazy var backButton = UIButton()
     private let naviLabel = UILabel()
     
     private let missionImageView = UIImageView()
@@ -48,18 +48,28 @@ class MissionViewController : UIViewController{
         super.viewDidLoad()
         setUI()
         setLayout()
+        setAddTarget()
         view.backgroundColor = .white
+      
     }
+    
     
     //MARK: - Action Method
     
 }
 
 extension MissionViewController {
+    private func setAddTarget() {
+        backButton.addTarget(self, action: #selector(popViewController), for: .touchUpInside)
+    }
+    
+    
     private func setUI() {
+        
         backButton.do {
             $0.setBackgroundImage(Image.backButton, for: .normal)
         }
+        
         
         naviLabel.do {
             $0.text = "오늘의 미션"
@@ -70,6 +80,7 @@ extension MissionViewController {
             $0.backgroundColor = .gray
             $0.layer.cornerRadius = 12
             $0.image = Image.missionImage
+            $0.isUserInteractionEnabled = true
         }
         
         presentImageView.do {
@@ -130,6 +141,7 @@ extension MissionViewController {
         backButton.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.leading.equalToSuperview()
+            $0.width.height.equalTo(20.adjusted)
         }
         
         naviLabel.snp.makeConstraints {
@@ -139,7 +151,7 @@ extension MissionViewController {
         
         naviView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide).offset(12.adjusted)
-            $0.leading.equalToSuperview().inset(15.adjusted)
+            $0.leading.trailing.equalToSuperview().inset(15.adjusted)
             $0.height.equalTo(32.adjusted)
         }
         
@@ -212,5 +224,11 @@ extension MissionViewController {
             $0.height.equalTo(44.adjusted)
             $0.directionalHorizontalEdges.equalToSuperview().inset(15.adjusted)
         }
+    }
+    
+    @objc
+    private func popViewController() {
+        print(">?")
+        self.navigationController?.popViewController(animated: true)
     }
 }
