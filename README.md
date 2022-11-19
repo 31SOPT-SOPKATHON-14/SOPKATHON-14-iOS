@@ -194,9 +194,9 @@ https://sulfuric-alphabet-33a.notion.site/iOS-1-d5a179be349642798efa425aaca8ead5
 <summary>윤서☃️</summary>
 <div markdown="1">       
 
-- 어려웠던 점 : 
+- 어려웠던 점 : 버튼에 addTarget이 되지 않았다.
  
-- 해결 방법 :
+- 해결 방법 : 버튼의 superview의 너비를 정해주지 않아서 하위뷰인 버튼의 영역도 잡히지 않아서였다. . 
 
 </div>
 </details>
