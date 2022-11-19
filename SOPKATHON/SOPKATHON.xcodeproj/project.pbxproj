@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B186B952928DE480030F5DE /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B186B942928DE480030F5DE /* NetworkLoggerPlugin.swift */; };
+		3B186B982928DEA10030F5DE /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 3B186B972928DEA10030F5DE /* Moya */; };
+		3B186B9A2928DED30030F5DE /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B186B992928DED30030F5DE /* Enviroment.swift */; };
+		3B186B9C2928DF050030F5DE /* URLConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B186B9B2928DF050030F5DE /* URLConstant.swift */; };
+		3B186B9E2928DF3C0030F5DE /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B186B9D2928DF3C0030F5DE /* GeneralResponse.swift */; };
+		3B186BA02928DF4F0030F5DE /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B186B9F2928DF4F0030F5DE /* Encodable+.swift */; };
+		3B186BA22928DF620030F5DE /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B186BA12928DF620030F5DE /* NetworkConstant.swift */; };
+		3B186BA42928DF710030F5DE /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B186BA32928DF710030F5DE /* NetworkResult.swift */; };
+		3B186BA72928DFFE0030F5DE /* SigninResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B186BA62928DFFE0030F5DE /* SigninResponse.swift */; };
+		3B186BA92928E0070030F5DE /* SigninRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B186BA82928E0070030F5DE /* SigninRequest.swift */; };
 		3B61155229269FE200AF62E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B61155129269FE200AF62E6 /* AppDelegate.swift */; };
 		3B61155429269FE200AF62E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B61155329269FE200AF62E6 /* SceneDelegate.swift */; };
 		3B61155629269FE200AF62E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B61155529269FE200AF62E6 /* ViewController.swift */; };
@@ -27,6 +37,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B186B942928DE480030F5DE /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
+		3B186B992928DED30030F5DE /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
+		3B186B9B2928DF050030F5DE /* URLConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstant.swift; sourceTree = "<group>"; };
+		3B186B9D2928DF3C0030F5DE /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
+		3B186B9F2928DF4F0030F5DE /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
+		3B186BA12928DF620030F5DE /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
+		3B186BA32928DF710030F5DE /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		3B186BA62928DFFE0030F5DE /* SigninResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninResponse.swift; sourceTree = "<group>"; };
+		3B186BA82928E0070030F5DE /* SigninRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninRequest.swift; sourceTree = "<group>"; };
 		3B61154E29269FE200AF62E6 /* SOPKATHON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOPKATHON.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B61155129269FE200AF62E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B61155329269FE200AF62E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +71,7 @@
 			files = (
 				3B6115882926B46800AF62E6 /* Kingfisher in Frameworks */,
 				3B61158B2926B47000AF62E6 /* Then in Frameworks */,
+				3B186B982928DEA10030F5DE /* Moya in Frameworks */,
 				3B6115852926B45B00AF62E6 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +79,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B186B902928DDC50030F5DE /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3B186B912928DDCC0030F5DE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3B186B992928DED30030F5DE /* Enviroment.swift */,
+				3B186B9B2928DF050030F5DE /* URLConstant.swift */,
+				3B186B9D2928DF3C0030F5DE /* GeneralResponse.swift */,
+				3B186B9F2928DF4F0030F5DE /* Encodable+.swift */,
+				3B186BA12928DF620030F5DE /* NetworkConstant.swift */,
+				3B186BA32928DF710030F5DE /* NetworkResult.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		3B186B922928DDD70030F5DE /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				3B186BA52928DFEE0030F5DE /* Siginin */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		3B186B932928DDF00030F5DE /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				3B186B942928DE480030F5DE /* NetworkLoggerPlugin.swift */,
+			);
+			path = Plugin;
+			sourceTree = "<group>";
+		};
+		3B186BA52928DFEE0030F5DE /* Siginin */ = {
+			isa = PBXGroup;
+			children = (
+				3B186BA62928DFFE0030F5DE /* SigninResponse.swift */,
+				3B186BA82928E0070030F5DE /* SigninRequest.swift */,
+			);
+			path = Siginin;
+			sourceTree = "<group>";
+		};
+		3B186BAA2928E0390030F5DE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		3B61154529269FE200AF62E6 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +171,11 @@
 		3B6115662926A7CF00AF62E6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				3B186BAA2928E0390030F5DE /* Service */,
+				3B186B912928DDCC0030F5DE /* Base */,
+				3B186B902928DDC50030F5DE /* API */,
+				3B186B932928DDF00030F5DE /* Plugin */,
+				3B186B922928DDD70030F5DE /* DataModel */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -205,6 +282,7 @@
 				3B6115842926B45B00AF62E6 /* SnapKit */,
 				3B6115872926B46800AF62E6 /* Kingfisher */,
 				3B61158A2926B47000AF62E6 /* Then */,
+				3B186B972928DEA10030F5DE /* Moya */,
 			);
 			productName = SOPKATHON;
 			productReference = 3B61154E29269FE200AF62E6 /* SOPKATHON.app */;
@@ -238,6 +316,7 @@
 				3B6115832926B45B00AF62E6 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				3B6115862926B46800AF62E6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				3B6115892926B47000AF62E6 /* XCRemoteSwiftPackageReference "Then" */,
+				3B186B962928DEA10030F5DE /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 3B61154F29269FE200AF62E6 /* Products */;
 			projectDirPath = "";
@@ -269,14 +348,23 @@
 				3B6115732926AB0B00AF62E6 /* UIView+.swift in Sources */,
 				3B61157E2926AEC300AF62E6 /* Image.swift in Sources */,
 				3B6115772926ADB100AF62E6 /* UITabBar+.swift in Sources */,
+				3B186BA92928E0070030F5DE /* SigninRequest.swift in Sources */,
+				3B186BA42928DF710030F5DE /* NetworkResult.swift in Sources */,
+				3B186BA02928DF4F0030F5DE /* Encodable+.swift in Sources */,
+				3B186B9C2928DF050030F5DE /* URLConstant.swift in Sources */,
+				3B186B9E2928DF3C0030F5DE /* GeneralResponse.swift in Sources */,
 				3B6115792926AEAA00AF62E6 /* Color.swift in Sources */,
 				3B61155629269FE200AF62E6 /* ViewController.swift in Sources */,
 				3B6115752926AB2A00AF62E6 /* UIstackView+.swift in Sources */,
+				3B186BA22928DF620030F5DE /* NetworkConstant.swift in Sources */,
 				3B61155229269FE200AF62E6 /* AppDelegate.swift in Sources */,
 				3B61157C2926AEB600AF62E6 /* String.swift in Sources */,
 				3B6115822926B0F800AF62E6 /* Adjusted+.swift in Sources */,
 				3B61155429269FE200AF62E6 /* SceneDelegate.swift in Sources */,
+				3B186BA72928DFFE0030F5DE /* SigninResponse.swift in Sources */,
 				3B6115802926B00B00AF62E6 /* Const.swift in Sources */,
+				3B186B952928DE480030F5DE /* NetworkLoggerPlugin.swift in Sources */,
+				3B186B9A2928DED30030F5DE /* Enviroment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +574,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3B186B962928DEA10030F5DE /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		3B6115832926B45B00AF62E6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -513,6 +609,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3B186B972928DEA10030F5DE /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B186B962928DEA10030F5DE /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
 		3B6115842926B45B00AF62E6 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3B6115832926B45B00AF62E6 /* XCRemoteSwiftPackageReference "SnapKit" */;
