@@ -10,6 +10,8 @@ import SnapKit
 
 class MissionViewController : UIViewController{
     
+    
+    
     //MARK: - Properties
     
     //MARK: - UI Components
@@ -18,7 +20,7 @@ class MissionViewController : UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("MissionView")
         setUI()
         setLayout()
     }
