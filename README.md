@@ -1,5 +1,8 @@
 # SOPKATHON-iOS
 
+![image 10@3x](https://user-images.githubusercontent.com/65678579/202875746-d0bfe0ba-2c08-4dfc-8159-b073e4e8c4ed.png)
+![Slide 16_9 - 19@3x](https://user-images.githubusercontent.com/65678579/202875781-3a7f6f6d-2a3d-400d-bfc1-b1dac73711c6.png)
+![Slide 16_9 - 13@3x](https://user-images.githubusercontent.com/65678579/202875784-a4484710-170b-4576-98cb-a7e0b24c9e83.png)
 
 <br>
 
