@@ -41,6 +41,8 @@ class LaterHomeViewController: UIViewController {
     private lazy var missionClickButton: UIButton = {
         let button = UIButton()
         button.imageView?.contentMode = .scaleToFill
+        button.isSelected = false
+        button.adjustsImageWhenHighlighted = false
         return button
     }()
     

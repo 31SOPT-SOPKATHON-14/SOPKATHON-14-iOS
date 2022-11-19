@@ -42,7 +42,7 @@ class OnboardingViewController : UIViewController{
     
     //MARK: - Screen Change
     private func pushToHomeView() {
-        let homeView = LaterHomeViewController()
+        let homeView = HomeViewController()
         self.navigationController?.pushViewController(homeView, animated: true)
     }
     

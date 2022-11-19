@@ -14,10 +14,28 @@ class HomeViewController : UIViewController{
     enum ViewType {
         case missionStart
         case missionFinish
+        
+        var arrivalText: String {
+            switch self {
+            case .missionFinish:
+                return "달성 완료!"
+            case .missionStart:
+                return "미션이 도착했어요!"
+            }
+        }
+        
+        var clickText: String {
+            switch self {
+            case .missionStart:
+                return "클릭해서 확인해보세요!"
+            case .missionFinish:
+                return "마이페이지에서 달성한 미션들을 확인하세요."
+            }
+        }
     }
     
     var viewType: ViewType = .missionFinish {
-        didSet{
+        didSet {
             setSuccessView()
         }
     }
@@ -53,7 +71,7 @@ class HomeViewController : UIViewController{
     
     private let missionArriveLabel: UILabel = {
         let label = UILabel()
-//        label.text = "미션이 도착했어요!"
+        label.text = "미션이 도착했어요!"
         label.font = .systemFont(ofSize: 32, weight: .bold)
 
         return label
@@ -61,7 +79,7 @@ class HomeViewController : UIViewController{
     
     private let missionClickLabel: UILabel = {
         let label = UILabel()
-//        label.text = "클릭해서 미션을 확인해보세요!"
+        label.text = "클릭해서 미션을 확인해보세요!"
         label.font = .systemFont(ofSize: 16, weight: .medium)
 
         return label
@@ -71,6 +89,7 @@ class HomeViewController : UIViewController{
         let button = UIButton()
         button.imageView?.contentMode = .scaleToFill
         button.addTarget(self, action: #selector(touchupMissionButton), for: .touchUpInside)
+        button.adjustsImageWhenHighlighted = false
         return button
     }()
     
@@ -92,7 +111,8 @@ class HomeViewController : UIViewController{
     
     @objc
     private func touchupMyPageButton() {
-        pushToMyPageView()
+        let nextVC = MyPageViewController()
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     private func pushToRankingView() {
@@ -187,16 +207,14 @@ extension HomeViewController {
         case .missionStart:
             dateBackgroundView.isHidden = false
             dateLabel.isHidden = false
-            missionArriveLabel.text = "미션이 도착했어요!"
-            missionClickLabel.text = "클릭해서 확인해보세요!"
+            missionArriveLabel.text = viewType.arrivalText
+            missionClickLabel.text = viewType.clickText
             missionClickButton.setImage(UIImage(named: "mission"),for: .normal)
         case .missionFinish:
             dateBackgroundView.isHidden = true
-            dateLabel.isHidden = true
-            missionArriveLabel.text = "달성 완료!"
-            missionClickLabel.text = "마이페이지에서 달성한 미션들을 확인하세요."
+            missionArriveLabel.text = viewType.arrivalText
+            missionClickLabel.text = viewType.clickText
             missionClickButton.setImage(UIImage(named: "successMission"),for: .normal)
-        
         }
     }
 }
