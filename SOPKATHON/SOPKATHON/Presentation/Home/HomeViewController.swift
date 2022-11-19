@@ -10,22 +10,36 @@ import SnapKit
 
 class HomeViewController : UIViewController{
     
+    //MARK: - View Style
+    enum ViewType {
+        case missionStart
+        case missionFinish
+    }
+    
+    var viewType: ViewType = .missionFinish {
+        didSet{
+            setSuccessView()
+        }
+    }
+    
 
     //MARK: - UI Components
     private let myPageButton: UIButton = {
         let button = UIButton()
+        button.addTarget(self, action: #selector(touchupMyPageButton), for: .touchUpInside)
         return button
     }()
     
     private let rankingButton: UIButton = {
        let button = UIButton()
+        button.addTarget(self, action: #selector(touchupRakingButton), for: .touchUpInside)
         return button
     }()
     
     private let dateBackgroundView: UIView = {
         let view = UIView()
          view.clipsToBounds = true
-        view.backgroundColor = .blue
+        view.backgroundColor = UIColor(r: 191, g: 191, b: 255).withAlphaComponent(100)
          view.layer.cornerRadius = 12
          return view
     }()
@@ -39,13 +53,17 @@ class HomeViewController : UIViewController{
     
     private let missionArriveLabel: UILabel = {
         let label = UILabel()
-        label.text = "미션이 도착했어요!"
+//        label.text = "미션이 도착했어요!"
+        label.font = .systemFont(ofSize: 32, weight: .bold)
+
         return label
     }()
     
     private let missionClickLabel: UILabel = {
         let label = UILabel()
-        label.text = "클릭해서 미션을 확인해보세요!"
+//        label.text = "클릭해서 미션을 확인해보세요!"
+        label.font = .systemFont(ofSize: 16, weight: .medium)
+
         return label
     }()
     
@@ -67,6 +85,25 @@ class HomeViewController : UIViewController{
         pushToMissionView()
     }
     
+    private func pushToMyPageView() {
+        let mypageView = MyPageViewController()
+        self.navigationController?.pushViewController(mypageView, animated: true)
+    }
+    
+    @objc
+    private func touchupMyPageButton() {
+        pushToMyPageView()
+    }
+    
+    private func pushToRankingView() {
+        let rankingView = RankingViewController()
+        self.navigationController?.pushViewController(rankingView, animated: true)
+    }
+    
+    @objc
+    private func touchupRakingButton() {
+        pushToRankingView()
+    }
     //MARK: - Life Cycle
     
     override func viewDidLoad() {
@@ -88,8 +125,8 @@ class HomeViewController : UIViewController{
     }
     
     private func configButton() {
-        rankingButton.setImage(UIImage(systemName: "bolt"), for: .normal)
-        myPageButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        rankingButton.setImage(UIImage(named: "ic_ranking"), for: .normal)
+        myPageButton.setImage(UIImage(named: "ic_my"), for: .normal)
         missionClickButton.setImage(UIImage(named: "mission"),for: .normal)
     }
     
@@ -144,4 +181,23 @@ class HomeViewController : UIViewController{
     
 }
 
+extension HomeViewController {
+    private func setSuccessView() {
+        switch viewType {
+        case .missionStart:
+            dateBackgroundView.isHidden = false
+            dateLabel.isHidden = false
+            missionArriveLabel.text = "미션이 도착했어요!"
+            missionClickLabel.text = "클릭해서 확인해보세요!"
+            missionClickButton.setImage(UIImage(named: "mission"),for: .normal)
+        case .missionFinish:
+            dateBackgroundView.isHidden = true
+            dateLabel.isHidden = true
+            missionArriveLabel.text = "달성 완료!"
+            missionClickLabel.text = "마이페이지에서 달성한 미션들을 확인하세요."
+            missionClickButton.setImage(UIImage(named: "successMission"),for: .normal)
+        
+        }
+    }
+}
 
