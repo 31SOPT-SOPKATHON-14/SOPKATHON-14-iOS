@@ -89,6 +89,7 @@ class HomeViewController : UIViewController{
         let button = UIButton()
         button.imageView?.contentMode = .scaleToFill
         button.addTarget(self, action: #selector(touchupMissionButton), for: .touchUpInside)
+        button.adjustsImageWhenHighlighted = false
         return button
     }()
     

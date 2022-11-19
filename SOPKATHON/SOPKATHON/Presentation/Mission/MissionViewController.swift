@@ -61,6 +61,7 @@ class MissionViewController : UIViewController{
 extension MissionViewController {
     private func setAddTarget() {
         backButton.addTarget(self, action: #selector(popViewController), for: .touchUpInside)
+        finishMissionButton.addTarget(self, action: #selector(presentViewController), for: .touchUpInside)
     }
     
     
@@ -230,5 +231,11 @@ extension MissionViewController {
     private func popViewController() {
         print(">?")
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc
+    private func presentViewController() {
+        let nextVC = LaterHomeViewController()
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }
