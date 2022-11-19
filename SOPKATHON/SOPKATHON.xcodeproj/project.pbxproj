@@ -40,6 +40,7 @@
 		87AD484529295A6A00BEB36D /* MissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AD484429295A6A00BEB36D /* MissionViewController.swift */; };
 		87AD484729295ACC00BEB36D /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AD484629295ACC00BEB36D /* RankingViewController.swift */; };
 		87AD484A29295B3600BEB36D /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AD484929295B3600BEB36D /* OnboardingViewController.swift */; };
+		87AD485229297E9C00BEB36D /* MyPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AD485129297E9C00BEB36D /* MyPageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		87AD484429295A6A00BEB36D /* MissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionViewController.swift; sourceTree = "<group>"; };
 		87AD484629295ACC00BEB36D /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		87AD484929295B3600BEB36D /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		87AD485129297E9C00BEB36D /* MyPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				87AD483E292956AC00BEB36D /* MyPageViewController.swift */,
+				87AD485129297E9C00BEB36D /* MyPageTableViewCell.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				3B186BA42928DF710030F5DE /* NetworkResult.swift in Sources */,
 				3B186BA02928DF4F0030F5DE /* Encodable+.swift in Sources */,
 				3B186B9C2928DF050030F5DE /* URLConstant.swift in Sources */,
+				87AD485229297E9C00BEB36D /* MyPageTableViewCell.swift in Sources */,
 				3B186B9E2928DF3C0030F5DE /* GeneralResponse.swift in Sources */,
 				87AD484A29295B3600BEB36D /* OnboardingViewController.swift in Sources */,
 				3B6115792926AEAA00AF62E6 /* Color.swift in Sources */,
